@@ -57,7 +57,7 @@ RUN apt-get install -y\
 RUN sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install && axel https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb && axel https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 RUN wget https://raw.githubusercontent.com/theshashankk/TeleBot/master/theshashank.py
-RUN wget https://raw.githubusercontent.com/theshashankk/TeleBot/master/requirements.txt
+RUN wget https://raw.githubusercontent.com/theshashankk/TeleBot/master/setuptele.txt
 #RUN mkdir /root/telebot
 #RUN wget https://github.com/Sh1vam/javes-3.0/archive/master.zip && unzip master.zip && mv -f javes-3.0-master/* /root/ub
 #RUN pip install --upgrade pip setuptools wheel
@@ -67,6 +67,6 @@ RUN wget https://raw.githubusercontent.com/theshashankk/TeleBot/master/requireme
 #RUN mv ub/javes_main/extra/apktool /usr/local/bin
 #RUN mv ub/javes_main/extra/apktool.jar /usr/local/bin
 #RUN chmod +x /usr/local/bin/*
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r setuptele.txt
 #CMD ["python3","-m","telebot"]
 CMD ["python3","theshashank.py"]
