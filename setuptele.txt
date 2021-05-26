@@ -24,7 +24,7 @@ google_images_download>=2.7.1
 googletrans==3.1.0a0
 gsearch
 hachoir
-heroku3==4.2.3
+heroku3
 httplib2<0.18.0
 humanize
 lxml
