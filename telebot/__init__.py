@@ -5,14 +5,14 @@ from distutils.util import strtobool as sb
 from logging import basicConfig, getLogger, INFO, DEBUG
 import os
 import sys
-from telethon.sessions import StringSession
+from telethon.sessions import TELETHON_STRING
 from telethon import TelegramClient
 from telebot.telebotConfig import Var
 import time
 
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+if Var.TELETHON_STRING:
+    session_name = str(Var.TELETHON_STRING)
+    bot = TelegramClient(Stringsession(session_name), Var.APP_ID, Var.API_HASH)
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
@@ -44,7 +44,7 @@ if bool(ENV):
         )
     else:
         basicConfig(
-            format="✘ %(asctime)s ✘ - ⫸ %(name)s ⫷ - ⛝ %(levelname)s ⛝ - ║ %(message)s ║",
+            format="𝐓𝐇𝐄 𝐒𝐇𝐀𝐒𝐇𝐀𝐍𝐊 %(asctime)s ✘ - ⫸ %(name)s ⫷ - ⛝ %(levelname)s ⛝ - ║ %(message)s ║",
             level=INFO)
     LOGS = getLogger(__name__)
 
