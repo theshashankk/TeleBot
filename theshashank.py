@@ -6,7 +6,7 @@ LOGS = getLogger("Helper")
 os.system("git clone https://github.com/theshashankk/TeleBot telebot")
 os.chdir("darkcobra")
 process = subprocess.Popen(
-        ["python3", "-m", "userbot"],
+        ["python3", "-m", "telebot"],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,)
 out, er = process.communicate()
