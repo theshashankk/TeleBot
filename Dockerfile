@@ -57,7 +57,7 @@ RUN wget -O chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -
     unzip chromedriver.zip chromedriver -d /usr/bin/ && \
     rm chromedriver.zip
 COPY theshashank.py .
-COPY requirements.txt .
+COPY setuptele.txt .
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r setuptele.txt
 CMD ["python3","theshashank.py"]
 
